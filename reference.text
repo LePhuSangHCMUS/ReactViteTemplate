@@ -1,0 +1,10 @@
+=======Config Permission UI==========
+https://stackoverflow.com/questions/56004504/how-to-implement-role-based-restrictions-permissions-in-react-redux-app
+=======Config Socket Io=============
+https://stackoverflow.com/questions/37876889/react-redux-and-websockets-with-socket-io
+https://github.com/erikras/react-redux-universal-hot-example
+
+========Config Redux=====
+https://dev.to/bnorbertjs/async-react-basics-with-redux-thunk--redux-saga-4af7
+https://blog.logrocket.com/understanding-redux-saga-from-action-creators-to-sagas-2587298b5e71/
+https://medium.com/@lavitr01051977/make-your-first-call-to-api-using-redux-saga-15aa995df5b6

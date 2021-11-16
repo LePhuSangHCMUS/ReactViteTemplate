@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t sang/react-boiler:latest -f Dockerfile.dev .
+script:
+    - docker run sang/react-boiler npm run test -- --coverage
+

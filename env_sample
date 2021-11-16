@@ -1,0 +1,7 @@
+REACT_APP_BASE_URL=
+REACT_APP_NODE_ENV=development
+REACT_APP_CONTENT_URL=https://api.9code.vn/api/content/
+REACT_APP_MEDIA_URL=https://media.9code.vn/
+REACT_APP_IDENTITY_URL=https://api.9code.vn/identity/
+
+

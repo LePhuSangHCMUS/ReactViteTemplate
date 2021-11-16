@@ -1,0 +1,27 @@
+version: "3"
+services:
+  react-boiler:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes: 
+      - /app/node_modules
+      - .:/app
+    stdin_open: true # ~ -i-t avoid error webpack output is served from 
+                     #Content not from webpack is served from /app/react-boiler/public
+                     #404s will fallback to /
+    react-boiler-test:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes: 
+      - /app/node_modules
+      - .:/app
+    command: ["npm","run","test"]
+    stdin_open: true # ~ -i-t avoid error webpack output is served from 
+                     #Content not from webpack is served from /app/react-boiler/public
+                     #404s will fallback to /

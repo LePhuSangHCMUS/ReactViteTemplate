@@ -1,0 +1,28 @@
+{
+  "name": "vite-react-boilerplate",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-i18next": "^11.14.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "socket.io-client": "^4.3.2",
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "postcss-cli": "^9.0.1",
+    "postcss": "^8.3.9"
+  }
+}
