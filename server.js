@@ -7,12 +7,12 @@ const app = express();
 const setupProxy = require('./src/setupProxy');
 const PORT = process.env.PORT || 3000
 
-app.use(expressStaticGzip(path.join(__dirname, 'build')));
+app.use(expressStaticGzip(path.join(__dirname, 'dist')));
 
 setupProxy(app);
 
 app.get('/*', function (req, res) {
-  let indexFile = path.join(__dirname, 'build', 'index.html')
+  let indexFile = path.join(__dirname, 'dist', 'index.html')
   if (fs.existsSync(indexFile)) {
      res.sendFile(indexFile);
   } else {

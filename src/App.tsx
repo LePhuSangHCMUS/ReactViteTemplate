@@ -1,7 +1,7 @@
-//lib
+// //lib
 import ButtonDarkMode from "@Components/common/ButtonDarkMode/ButtonDarkMode";
-//components
-//config
+// //components
+// //config
 import i18next from "@Configs/i18n/i18n";
 import useDarkMode from "@Hooks/useDarkMode";
 import React,{useEffect} from "react";
@@ -41,17 +41,17 @@ function initSocket() {
 
 
 export default function App() {
-  window.addEventListener('offline', function(e) {
-    console.log('offline'); });
+  // window.addEventListener('offline', function(e) {
+  //   console.log('offline'); });
     
-    window.addEventListener('online', function(e) { console.log('online');
-    }); 
-  useEffect(() => {
-    return () => {
-    }
-  }, [])
+  //   window.addEventListener('online', function(e) { console.log('online');
+  //   }); 
+  // useEffect(() => {
+  //   return () => {
+  //   }
+  // }, [])
   const [theme, themeToggler, mountedComponent] = useDarkMode();
-  if (!mountedComponent) return<div> loading...</div>;
+  // if (!mountedComponent) return<div> loading...</div>;
   return (
     <div className={`app ${theme==="light"?"light":"dark"}`}>
       <I18nextProvider i18n={i18next}>

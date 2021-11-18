@@ -1,15 +1,17 @@
-import React from "react"
-import routes from "@Configs/routes/index"
-import {Switch} from "react-router"
-import RouterWithLayout from "./RouteWithLayout"
-const AppRouter = ()=>{
-    return <Switch>
-    {
-     routes.map(({page,layout,path,isPrivate,...rest},index)=>{
-        return  <RouterWithLayout key={index} page ={page} layout={layout} path={path} isPrivate={isPrivate} {...rest} />
-      }  
-    )
+import routes from '@Configs/routes';
+import { useRoutes } from 'react-router-dom';
+import {useSelector} from "react-redux"
+function AppRoute() {
+  const { isLoggedIn } = useSelector((state:any) => {
+     return {
+        isLoggedIn:state.auth
+     }
+    });
+  const routing = useRoutes(routes(isLoggedIn));
+  return (
+    <>
+      {routing}
+    </>
+  );
 }
-    </Switch>
-}
-export default AppRouter;
+export default AppRoute
