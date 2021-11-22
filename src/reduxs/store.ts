@@ -1,6 +1,6 @@
 //SOCKET
-import SocketClient from "@Configs/socket/socket-client";
-import socketMiddleware from "@Configs/socket/socket-middleware";
+// import SocketClient from "@Configs/socket/socket-client";
+// import socketMiddleware from "@Configs/socket/socket-middleware";
 import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 // import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
@@ -11,13 +11,13 @@ import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './root-reducer';
 const sagaMiddleware = createSagaMiddleware()
-const socketClient = new SocketClient();
+// const socketClient = new SocketClient();
 // socketClient.connect()
 // console.log(process.env)
 export const history = createBrowserHistory();
 const enhancers = []
 const middleware = [
-    socketMiddleware(socketClient),
+    // socketMiddleware(socketClient),
     sagaMiddleware,
     routerMiddleware(history)
 ]

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run watch:css && vite build",
     "serve": "vite preview",
     "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css"
   },
@@ -17,7 +17,6 @@
     "http-proxy-middleware": "^2.0.1",
     "i18next": "^21.5.2",
     "i18next-http-backend": "^1.3.1",
-    "immutable": "^4.0.0",
     "lodash": "^4.17.21",
     "lowdb": "^3.0.0",
     "path": "^0.12.7",
