@@ -20,7 +20,7 @@ import {IUnfoldSaga,ICallbacksSaga} from "@Interfaces/saga"
     return `${key}_SUCCEEDED`;
   }
 export function* unfoldSaga(
-    { handler,key,callbacks}:IUnfoldSaga,
+    { handler,key,callbacks={}}:IUnfoldSaga,
   ) {
 
     const {

@@ -8,7 +8,7 @@ import styles from "./MainLayout.module.scss";
 
 
 interface IProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const MainLayout = (props: IProps) => {

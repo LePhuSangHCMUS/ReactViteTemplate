@@ -8,7 +8,7 @@ import styles from "./DashboardLayout.module.scss";
 
 
 interface IProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const DashboardLayout = (props: IProps) => {

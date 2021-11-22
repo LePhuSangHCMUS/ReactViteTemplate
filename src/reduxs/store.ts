@@ -13,10 +13,8 @@ import rootReducer from './root-reducer';
 const sagaMiddleware = createSagaMiddleware()
 const socketClient = new SocketClient();
 // socketClient.connect()
-const  immutableTransform =require('redux-persist-transform-immutable') 
 // console.log(process.env)
 export const history = createBrowserHistory();
-const initialState = fromJS({})
 const enhancers = []
 const middleware = [
     socketMiddleware(socketClient),
@@ -30,18 +28,12 @@ export const persistConfig  = {
     key: 'root',
     storage: storage,
     whitelist: ['loginReducer'],
-    transforms: [immutableTransform({
-        whitelist: ['loginReducer']
-      })],
     // stateReconciler: autoMergeLevel2
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
-
-
 ///Config Redux Dev Tool
 console.log("[Store.ts- 43]",import.meta.env);
-
 if (import.meta.env.MODE=== 'development') {
     const devToolsExtension =(window as any).devToolsExtension ? (window as any).devToolsExtension() : (f:any) => f
 

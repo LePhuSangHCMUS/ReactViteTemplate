@@ -1,38 +1,40 @@
 import { IAction } from "@Interfaces/common";
 import ActionType from "./action-type";
-import { fromJS } from "immutable";
+import _ from "lodash";
 import {
   createActionTypeOnStart,
   createActionTypeOnSuccess,
   createActionTypeOnFailure,
   createActionTypeOnFinish,
 } from "../unfoldSaga";
-const initialState = fromJS({
+const initialState = {
   type: null,
   loading: false,
   payload: null,
   error: null,
-});
+};
 export default (state = initialState, action: IAction) => {
   switch (action.type) {
     case createActionTypeOnStart(ActionType.LOGIN):
-      return state
-        .set("type", fromJS(action.type))
-        .set("loading", true)
-        .set("payload", null)
-        .set("error", null);
+        return _.merge(initialState,{
+          type:action.type,
+          loading:true,
+          payload:null,
+          error:null
+        })
     case createActionTypeOnSuccess(ActionType.LOGIN):
-      return state
-        .set("type", fromJS(action.type))
-        .set("loading", false)
-        .set("payload", fromJS(action.payload))
-        .set("error", null);
+        return _.merge(initialState,{
+          type:action.type,
+          loading:false,
+          payload:action.payload,
+          error:null
+        })
     case createActionTypeOnFailure(ActionType.LOGIN):
-      return state
-        .set("type", fromJS(action.type))
-        .set("loading", false)
-        .set("payload", null)
-        .set("error", fromJS(action.error));
+        return _.merge(initialState,{
+          type:action.type,
+          loading:false,
+          error:action.error
+        })
     default:
       return state;
   }
