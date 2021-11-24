@@ -21,6 +21,8 @@ const tailLayout = {
 
 // ==================  PAGE START   ===================
 const Demo = () => {
+
+  console.log("LOGIN")
   //==================  CONST
   const { t, i18n } = useTranslation("common");
   //===================  REDUX

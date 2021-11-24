@@ -22,6 +22,10 @@ import storeConfig from "./reduxs/store";
 import ConnectionDetect from "@Components/common/ConnectionDetect/ConnectionDetect";
 const { store, persistor ,sagaMiddleware} = storeConfig();
 sagaMiddleware.run(rootSagas)
+
+
+//You can import / export this, but that sounds like a pain. Seems like a good thing to add to global
+
 function initSocket() {
   const socket = io('', {path: '/ws'});
   socket.on('news', (data) => {
@@ -31,12 +35,11 @@ function initSocket() {
   socket.on('msg', (data) => {
     console.log(data);
   });
-  console.log("HIIII")
-
   return socket;
 }
 
 (global as any).socket = initSocket();
+
 
 
 

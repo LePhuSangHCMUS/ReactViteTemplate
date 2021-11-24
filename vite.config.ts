@@ -4,6 +4,8 @@ import { defineConfig } from 'vite'
 import alias from '@rollup/plugin-alias';
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import reactCssModule from "vite-plugin-react-css-modules";
+const generateScopedName = "[name]__[local]___[hash:base64:5]";
 
 const projectRootDir = resolve(__dirname);
 
@@ -14,7 +16,24 @@ export default defineConfig(({ command, mode })=>{
   console.log(mode);
   
  return {
-  plugins: [react(),alias(),viteCommonjs(),tsconfigPaths()],
+  plugins: [
+    react(),
+    alias(),
+    viteCommonjs(),
+    tsconfigPaths(),
+    reactCssModule({
+      generateScopedName,
+      filetypes: {
+        ".scss": {
+          syntax: "postcss-scss",
+        },
+      },
+    }),],
+    css: {
+      modules: {
+        generateScopedName,
+      },
+    },
   resolve: {
     alias: [
       { find: '@', replacement: resolve(projectRootDir, 'src') },
