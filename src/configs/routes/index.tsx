@@ -7,6 +7,7 @@ import MainLayout from "@Layouts/MainLayout/MainLayout";
 import Login from "@Pages/Login/Login";
 
 const routes = (isLoggedIn: any) => [
+  //Same PrivatP Route
   {
     path: '/',
     element: (isLoggedIn ? <DashboardLayout /> : <Navigate to="/login" />),
@@ -27,6 +28,7 @@ const routes = (isLoggedIn: any) => [
       // },
     ],
   },
+  //Same Public Route
   {
     path: '/',
     element: !isLoggedIn ? <MainLayout /> : <Navigate to="/app/dashboard" />,

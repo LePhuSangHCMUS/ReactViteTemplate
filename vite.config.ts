@@ -45,7 +45,10 @@ export default defineConfig(({ command, mode })=>{
     global: "window",
   },
   server: {
-    port: 9001
+    port: 9001,
+    hmr:{
+      overlay:true//Show Error Browser (Default true)
+    }
   }
  }
 })

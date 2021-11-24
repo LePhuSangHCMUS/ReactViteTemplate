@@ -19,6 +19,6 @@ function App(){
     },
     resetValue: () => setValue(''),
   };
-};
+}
 
 export default useInputText

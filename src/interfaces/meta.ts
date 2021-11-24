@@ -12,4 +12,4 @@ export interface IMeta {
       site?: string;
       cardType?: string;
     };
-  };
+  }

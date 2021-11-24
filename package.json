@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "npm run watch:css && vite build",
     "serve": "vite preview",
-    "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css"
+    "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css",
+    "lint": "eslint ./src --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "@rollup/plugin-alias": "^3.1.8",
@@ -39,7 +41,11 @@
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-react": "^1.0.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
     "sass": "^1.43.4",

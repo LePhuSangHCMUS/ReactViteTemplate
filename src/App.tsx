@@ -4,7 +4,7 @@ import ButtonDarkMode from "@Components/common/ButtonDarkMode/ButtonDarkMode";
 // //config
 import i18next from "@Configs/i18n/i18n";
 import useDarkMode from "@Hooks/useDarkMode";
-import React,{useEffect} from "react";
+import React,{} from "react";
 import { I18nextProvider } from "react-i18next";
 //const
 import io from 'socket.io-client';
@@ -31,6 +31,7 @@ function initSocket() {
   socket.on('msg', (data) => {
     console.log(data);
   });
+  console.log("HIIII")
 
   return socket;
 }
