@@ -5,18 +5,17 @@ import Header from "@Common/Header/Header";
 import React from "react";
 //Styled
 import styles from "./DashboardLayout.module.scss";
+import { Outlet } from "react-router";
 
 
 interface IProps {
-  children?: React.ReactNode;
 }
 
 const DashboardLayout = (props: IProps) => {
-  const { children } = props;
   return (
     <div className={styles.Layout}>
       <Header />
-      <div className={styles.Children}>{children}</div>
+      <div className={styles.Outlet}>{<Outlet/>}</div>
       <Footer />
     </div>
   );

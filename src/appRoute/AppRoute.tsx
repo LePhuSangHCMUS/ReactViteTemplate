@@ -9,6 +9,8 @@ function AppRoute() {
      }
     });
   const routing = useRoutes(routes(isLoggedIn));
+
+  console.log(routing)
   return (
     <Fragment>
       {routing}

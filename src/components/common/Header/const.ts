@@ -9,7 +9,7 @@ export const headerData = [
     id: 2,
     navItemName: "Login",
     keyLang:"COMMON_NAV_LOGIN",
-    path:"/user/login"
+    path:"/login"
 
   }
 ];
