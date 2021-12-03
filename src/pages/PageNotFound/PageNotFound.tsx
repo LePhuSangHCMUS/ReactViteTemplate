@@ -1,17 +1,14 @@
 import pageFailed from "@Assets/images/PageNotFound/404-failed.svg";
-import { Image ,Typography } from "antd";
 //Hocs
 import withScrollToTop from "@Hocs/withScrollToTop";
-import {
-  Button
-} from "antd";
+import { Button, Image, Typography } from "antd";
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./PageNotFound.module.scss";
 const { Paragraph } = Typography;
 
 const PageNotFound = (props: any) => {
-  const history = useHistory();
+  const history = useLocation();
 
   return (
     <div className={styles.Page}>
@@ -21,7 +18,7 @@ const PageNotFound = (props: any) => {
         Hãy kiểm tra xem liên kết mà bạn đang cố mở có chính xác không.</Paragraph>
 
       <Button onClick={()=>{
-        history.push("/")
+        // history.push("/")
       }} >Đi tới trang chủ</Button>
 
     </div>

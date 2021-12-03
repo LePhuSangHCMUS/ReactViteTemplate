@@ -1,9 +1,13 @@
-import MainLayout from "@Layouts/MainLayout/MainLayout";
-import DashboardLayout from "@Layouts/DashboardLayout/DashboardLayout";
-import Login from "@Pages/User/Login/Login";
-import Register from "@Pages/User/Register/Register";
+
+//layouts
+import DashboardLayout from "@Layouts/DashboardLayout";
+import MainLayout from "@Layouts/MainLayout";
+//Pages
+import Login from "@Pages/User/Login";
+import Register from "@Pages/User/Register";
 import React from "react";
-import { Navigate,Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
+
 
 const routes = (isLoggedIn: any) => [
   //Same Private Route

@@ -3,8 +3,8 @@ import HelmetTag from "@Common/HelmetTag/HelmetTag";
 //Meta
 import meta from "@Metas/login";
 //Action
-import * as loginAction from "@Reduxs/Authentication/action";
-import { Checkbox, Form, Input, Button, notification } from "antd";
+import * as actions from "@Reduxs/Authentication/action";
+import { Button, Checkbox, Form, Input, notification } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -53,7 +53,7 @@ const Demo = () => {
       },
     };
     await dispatch(
-      loginAction.login(
+      actions.login(
         {
           username: values?.username,
           password: values?.password,
