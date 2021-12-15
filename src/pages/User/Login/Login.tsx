@@ -97,7 +97,7 @@ const Demo = () => {
         </Form.Item>
 
         <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-          <Checkbox>{t("LOGIN_REMEMBERME")}</Checkbox>
+          <Checkbox>{t("LOGIN_REMEMBER_ME")}</Checkbox>
         </Form.Item>
 
         <Form.Item {...tailLayout}>
