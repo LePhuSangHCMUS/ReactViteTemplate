@@ -2,15 +2,16 @@
 import HelmetTag from "@Common/HelmetTag/HelmetTag";
 //Meta
 import meta from "@Metas/login";
+// import loginAtom, { withUserName } from "@Recoils/Login";
 //Action
 import * as actions from "@Reduxs/Authentication/action";
 import { Button, Checkbox, Form, Input, notification } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
+// import { useRecoilValue, useSetRecoilState } from "recoil";
 //Styles
 import styles from "./Login.module.scss";
-
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
@@ -21,8 +22,9 @@ const tailLayout = {
 
 // ==================  PAGE START   ===================
 const Demo = () => {
-
-  console.log("LOGIN")
+  // const loginData = useRecoilValue(loginAtom);
+  // const setUseNameData = useSetRecoilState(withUserName);  
+  
   //==================  CONST
   const { t, i18n } = useTranslation("common");
   //===================  REDUX
@@ -62,7 +64,6 @@ const Demo = () => {
       )
     );
   };
-
   const onFinishFailed = (errorInfo: any) => {
     // console.log('Failed:', errorInfo);
   };
