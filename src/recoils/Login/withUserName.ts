@@ -2,8 +2,8 @@ import {
   selector
 } from 'recoil';
 import loginAtom from "./atom";
-const exampleWithUserName = selector({
-    key: 'charCountState', // unique ID (with respect to other atoms/selectors)
+const loginWithUserName = selector({
+    key: 'loginWithUserName', // unique ID (with respect to other atoms/selectors)
     get: ({get}) => {
       const loginData = `UserName: [${get(loginAtom).username}]` ;
       return loginData;
@@ -13,4 +13,4 @@ const exampleWithUserName = selector({
     }
   });
 
-  export default exampleWithUserName;
+  export default loginWithUserName;
