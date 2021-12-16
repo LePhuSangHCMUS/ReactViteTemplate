@@ -57,7 +57,6 @@ export default function App() {
           </React.Suspense>
         </BrowserRouter>
       </I18nextProvider>
-
       <ButtonDarkMode theme={theme} toggleTheme={themeToggler} />
       <ConnectionDetect />
     </div>
