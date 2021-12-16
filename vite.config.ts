@@ -1,13 +1,25 @@
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
 import alias from '@rollup/plugin-alias';
-import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 import reactCssModule from "vite-plugin-react-css-modules";
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { dependencies } from './package.json';
 const generateScopedName = "[name]__[local]___[hash:base64:5]";
+// console.log(dependencies);
 
 const projectRootDir = resolve(__dirname);
+const reactDeps = Object.keys(dependencies).filter(key => key === 'react' || key.startsWith('react-'))
+// const manualChunks = {
+//   vendor: reactDeps,
+//   ...Object.keys(dependencies).reduce((chunks, name) => {
+//     if (!reactDeps.includes(name)) {
+//       chunks[name] = [name]
+//     }
+//     return chunks
+//   }, {}),
+// }
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode })=>{
@@ -62,6 +74,20 @@ export default defineConfig(({ command, mode })=>{
     'process.env': {},
     'process': {},
     global: "window",
+  },
+  build: {
+    sourcemap: false,
+    cssCodeSplit:true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor:reactDeps ,// ['react', 'react-router-dom', 'react-dom'],
+          lodash:["lodash"],
+          "antd":["antd"],
+           
+        },
+      },
+    },
   },
   server: {
     port: 9001,
