@@ -1,5 +1,6 @@
 //Library
 import HelmetTag from "@Common/HelmetTag/HelmetTag";
+// import { useRecoilValue, useSetRecoilState } from "recoil";
 //Meta
 import meta from "@Metas/login";
 // import loginAtom, { withUserName } from "@Recoils/Login";
@@ -9,9 +10,9 @@ import { Button, Checkbox, Form, Input, notification } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-// import { useRecoilValue, useSetRecoilState } from "recoil";
 //Styles
 import styles from "./Login.module.scss";
+
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
@@ -24,7 +25,7 @@ const tailLayout = {
 const Demo = () => {
   // const loginData = useRecoilValue(loginAtom);
   // const setUseNameData = useSetRecoilState(withUserName);  
-  
+
   //==================  CONST  =============================
   const { t, i18n } = useTranslation("common");
   //===================  REDUX
@@ -67,11 +68,11 @@ const Demo = () => {
   const onFinishFailed = (errorInfo: any) => {
     // console.log('Failed:', errorInfo);
   };
-  // ==================  HOOK
-
+  // ==================  HOOK=============
   // ==================  MAIN START   ===================
   return (
     <div className={styles.Page}>
+
       <HelmetTag meta={meta} />
       <Form
         {...layout}
@@ -107,6 +108,11 @@ const Demo = () => {
         </Form.Item>
       </Form>
     </div>
+    // <button
+    // onClick={()=>{
+    //   globalAny.myEmitter.emit('event', "My Emit");
+    // }}
+    // >Emit</button>
   );
 };
 
