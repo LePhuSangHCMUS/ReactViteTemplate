@@ -4,7 +4,8 @@ import ConnectionDetect from "@Components/common/ConnectionDetect/ConnectionDete
 // //components
 // //config
 import i18next from "@Configs/i18n/i18n";
-import initGlobal, { globalAny } from "@Configs/initGlobal";
+import initEmitter from "./emit";
+import initSocket from "./socket";
 import useDarkMode from "@Hooks/useDarkMode";
 //store
 import rootSagas from '@Reduxs/root-sagas';
@@ -30,7 +31,8 @@ export default function App() {
 
   useEffect(() => {
     //Init socketIO,Emitter........
-    // initGlobal();
+    initEmitter();
+    initSocket();
     // const myEmitter=globalAny.myEmitter.addListener('event', (a:any) => {
     //   console.log("Emitted" ,a);
     // });
