@@ -6,4 +6,11 @@ function initEmitter() {
     globalAny.myEmitter = myEmitter;
 
   }
+
+  const EVENT_TYPE={
+    EVENT_LOG:"EVEN_LOG"
+}
+export {
+  EVENT_TYPE
+};
   export default initEmitter;
