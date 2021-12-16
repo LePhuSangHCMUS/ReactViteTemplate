@@ -4,7 +4,7 @@ import ConnectionDetect from "@Components/common/ConnectionDetect/ConnectionDete
 // //components
 // //config
 import i18next from "@Configs/i18n/i18n";
-import initEmitter from "./emit";
+import initEmitter from "./emitter";
 import initSocket from "./socket";
 import useDarkMode from "@Hooks/useDarkMode";
 //store
