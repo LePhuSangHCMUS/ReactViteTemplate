@@ -4,7 +4,7 @@ import HelmetTag from "@Common/HelmetTag/HelmetTag";
 import meta from "@Metas/login";
 //Action
 import * as loginAction from "@Reduxs/Authentication/action";
-import { Checkbox, Form, Input, Button, notification } from "antd";
+import { Button, Checkbox, Form, Input, notification } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";

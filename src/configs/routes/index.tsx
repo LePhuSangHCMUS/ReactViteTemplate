@@ -7,8 +7,6 @@ import Login from "@Pages/User/Login";
 import Register from "@Pages/User/Register";
 import React from "react";
 import { Navigate, Outlet } from 'react-router-dom';
-
-
 const routes = (isLoggedIn: any) => [
   //Same Private Route
   {
