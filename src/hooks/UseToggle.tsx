@@ -1,15 +1,15 @@
 import React, { useReducer } from "react";
 
 // Usage
-function App(){
-    const [isOn, toggleIsOn] = useToggle();
+// function App(){
+//     const [isOn, toggleIsOn] = useToggle();
     
-    return (
-      <button onClick={toggleIsOn}>
-        Turn  {isOn ? 'Off' : 'On'}
-      </button>
-    );
-  }
+//     return (
+//       <button onClick={toggleIsOn}>
+//         Turn  {isOn ? 'Off' : 'On'}
+//       </button>
+//     );
+//   }
 // Hook
 function useToggle(initialValue = false){
   // Returns the tuple [state, dispatch]
