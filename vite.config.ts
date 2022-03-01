@@ -6,6 +6,8 @@ import { defineConfig } from 'vite';
 import reactCssModule from "vite-plugin-react-css-modules";
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { dependencies } from './package.json';
+import { visualizer } from 'rollup-plugin-visualizer';
+
 const generateScopedName = "[name]__[local]___[hash:base64:5]";
 // console.log(dependencies);
 
@@ -23,10 +25,9 @@ const reactDeps = Object.keys(dependencies).filter(key => key === 'react' || key
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode })=>{
-
-  console.log(command);
   console.log(mode);
-  
+  console.log(command);
+
  return {
   plugins: [
     react(),
@@ -87,6 +88,16 @@ export default defineConfig(({ command, mode })=>{
            
         },
       },
+      plugins: [
+        (mode === 'analyze' &&
+            visualizer({
+              open: true,
+              filename: 'analyze/stats.html',
+              gzipSize: true,
+              brotliSize: true,
+            })),
+      ],
+
     },
   },
   server: {

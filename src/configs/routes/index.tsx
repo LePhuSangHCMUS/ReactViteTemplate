@@ -3,8 +3,12 @@
 import DashboardLayout from "@Layouts/DashboardLayout";
 import MainLayout from "@Layouts/MainLayout";
 //Pages
+//=======>User
 import Login from "@Pages/User/Login";
 import Register from "@Pages/User/Register";
+//=======>Sample
+import Sample from "@Pages/Sample";
+
 import React from "react";
 import { Navigate, Outlet } from 'react-router-dom';
 const routes = (isLoggedIn: any) => [
@@ -26,6 +30,7 @@ const routes = (isLoggedIn: any) => [
           // { path: '/add', element: <AddMember /> },
         ],
       },
+     
       { path: '/', element: <Navigate to="/app/dashboard" /> },
 
     ],
@@ -49,6 +54,11 @@ const routes = (isLoggedIn: any) => [
           }
         ]
     
+      },
+      {
+        path: '/sample',
+        element: <Sample />,
+       
       },
       { path: '/', element: <Navigate to="/login" /> },
     ],

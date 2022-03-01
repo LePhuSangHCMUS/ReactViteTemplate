@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run watch:css && vite build",
+    "analyze": "npm run watch:css && vite build --mode analyze",
     "serve": "vite preview",
     "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css",
     "lint": "eslint ./src --ignore-path .gitignore",
@@ -15,6 +16,9 @@
     "axios": "^0.24.0",
     "connected-react-router": "^6.9.1",
     "dotenv": "^10.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "express": "^4.17.1",
     "express-static-gzip": "^2.1.1",
     "fbemitter": "^3.0.0",
@@ -35,6 +39,7 @@
     "recoil": "^0.5.2",
     "redux-persist": "^6.0.0",
     "redux-saga": "^1.1.3",
+    "rollup-plugin-analyzer": "^4.0.0",
     "socket.io-client": "^4.3.2",
     "tailwindcss": "^2.2.19",
     "vite-plugin-react-css-modules": "^1.0.0",
@@ -54,6 +59,7 @@
     "eslint-plugin-react": "^7.27.1",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
+    "rollup-plugin-visualizer": "^5.6.0",
     "sass": "^1.43.4",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"

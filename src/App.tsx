@@ -24,7 +24,9 @@ import "./app.scss";
 import AppRouter from "./appRoute/AppRoute";
 import storeConfig from "./reduxs/store";
 const { store, persistor, sagaMiddleware } = storeConfig();
-sagaMiddleware.run(rootSagas)
+sagaMiddleware.run(rootSagas);
+const mode= import.meta.env.MODE;
+console.log(`%c${mode}`,"color: white; font-size: 40px ;background:green");
 
 //You can import / export this, but that sounds like a pain. Seems like a good thing to add to global
 export default function App() {

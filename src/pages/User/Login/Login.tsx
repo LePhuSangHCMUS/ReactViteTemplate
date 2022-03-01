@@ -22,7 +22,6 @@ const tailLayout = {
 };
 
 // ==================  PAGE START   ===================
-console.log(import.meta.env.VITE_MEDIA_URL);
 
 const Demo = () => {
   // const loginData = useRecoilValue(loginAtom);
