@@ -7,6 +7,7 @@ import reactCssModule from "vite-plugin-react-css-modules";
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { dependencies } from './package.json';
 import { visualizer } from 'rollup-plugin-visualizer';
+import { inspectorServer } from 'react-dev-inspector/plugins/vite'
 
 const generateScopedName = "[name]__[local]___[hash:base64:5]";
 // console.log(dependencies);
@@ -41,7 +42,10 @@ export default defineConfig(({ command, mode })=>{
           syntax: "postcss-scss",
         },
       },
-    }),],
+    }),
+    inspectorServer(),
+  
+  ],
     css: {
       modules: {
         generateScopedName,
