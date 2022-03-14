@@ -20,7 +20,7 @@ const Header = () => {
       </Link>
       <div className={styles.Navigator}>
         {headerData.map((item, index) => {
-          return <NavLink key={index} to={item.path}  >{t(item.keyLang)}</NavLink>
+          return <NavLink key={index} to={item.path}  >{t(item.keyLang,{option:'param'})}</NavLink>
         })}
       </div>
       <div className={styles.ButtonLanguage}>

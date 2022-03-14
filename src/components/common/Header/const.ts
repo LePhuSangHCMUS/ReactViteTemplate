@@ -2,13 +2,13 @@ export const headerData = [
   {
     id: 1,
     navItemName: "Home",
-    keyLang:"COMMON.NAV.HOME",
+    keyLang:"common.nav.home",
     path:"/"
   },
   {
     id: 2,
     navItemName: "Login",
-    keyLang:"COMMON.NAV.LOGIN",
+    keyLang:"common.nav.login",
     path:"/login"
 
   }

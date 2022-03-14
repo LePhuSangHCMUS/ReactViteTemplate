@@ -1,37 +1,37 @@
 {
-    "COMMON": {
-        "NAV": {
-            "HOME": "Home",
-            "LOGIN": "Login"
+    "common": {
+        "nav": {
+            "home": "Home {{option}}",
+            "login": "Login"
         },
-        "BUTTON": {
-            "SAVE": "save",
-            "DELETE": "delete",
-            "CANCEL": "cancel",
-            "EDIT": "edit"
+        "button": {
+            "save": "save",
+            "delete": "delete",
+            "cancel": "cancel",
+            "edit": "edit"
         },
-        "LABEL": {
-            "NAME": "name",
-            "AGE": "age"
+        "label": {
+            "name": "name",
+            "age": "age"
         },
-        "TITLE": {},
-        "PLACEHOLDER": {}
+        "title": {},
+        "placeholder": {}
     },
-    "PAGE": {
-        "LOGIN": {
-            "BUTTON": {
-                "SAVE": "save",
-                "DELETE": "delete",
-                "CANCEL": "cancel",
-                "EDIT": "edit"
+    "page": {
+        "login": {
+            "button": {
+                "save": "save",
+                "delete": "delete",
+                "cancel": "cancel",
+                "edit": "edit"
             },
-            "LABEL": {
-                "NAME": "name",
-                "AGE": "age"
+            "label": {
+                "name": "name",
+                "age": "age"
             },
-            "TITLE": {},
-            "PLACEHOLDER": {},
-             "FORM":{
+            "title": {},
+            "placeholder": {},
+             "form":{
                  
              }
         }
