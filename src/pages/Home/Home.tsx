@@ -1,7 +1,7 @@
 import HelmetTag from "@Common/HelmetTag/HelmetTag";
 import meta from "@Metas/home";
 import React from "react";
-import styles from "./Home.module.scss"
+import styles from "./Home.module.less"
 const Home = (props: any) => {
   // console.log(( global as any).socket);
   //FUNCTION

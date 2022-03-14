@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Sample.module.scss";
+import styles from "./Sample.module.less";
 import { Typography } from "antd"
 import SampleErrorBoundary from "@Components/sample/SampleErrorBoundary/SampleErrorBoundary"
 

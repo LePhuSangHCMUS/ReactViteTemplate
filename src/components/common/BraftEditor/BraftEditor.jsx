@@ -10,7 +10,7 @@ import "braft-extensions/dist/table.css";
 import { convertToHTML } from "draft-convert";
 import React, { useRef, useState } from "react";
 //Styled Component
-import styles from "./BraftEditor.module.scss";
+import styles from "./BraftEditor.module.less";
 BraftEditor.use(
   table({
     includeEditors: ["editor"],

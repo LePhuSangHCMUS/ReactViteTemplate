@@ -4,7 +4,7 @@ import Footer from "@Common/Footer/Footer";
 import Header from "@Common/Header/Header";
 import React from "react";
 //Styled
-import styles from "./MainLayout.module.scss";
+import styles from "./MainLayout.module.less";
 import {Outlet} from "react-router"
 
 interface IProps {

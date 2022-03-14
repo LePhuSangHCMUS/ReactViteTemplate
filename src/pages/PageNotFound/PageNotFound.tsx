@@ -4,7 +4,7 @@ import withScrollToTop from "@Hocs/withScrollToTop";
 import { Button, Image, Typography } from "antd";
 import React from 'react';
 import { useLocation } from "react-router-dom";
-import styles from "./PageNotFound.module.scss";
+import styles from "./PageNotFound.module.less";
 const { Paragraph } = Typography;
 
 const PageNotFound = (props: any) => {

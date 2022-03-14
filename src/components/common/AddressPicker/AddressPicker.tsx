@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 //Const
 import { addressDefault } from "./const";
 //Styled Component
-import styles from "./AddressPicker.module.scss";
+import styles from "./AddressPicker.module.less";
 
 //Const
 const { Option } = Select;

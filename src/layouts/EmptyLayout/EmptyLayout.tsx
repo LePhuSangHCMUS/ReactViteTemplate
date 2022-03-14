@@ -2,7 +2,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 //Styled
-import styles from "./EmptyLayout.module.scss";
+import styles from "./EmptyLayout.module.less";
 interface IProps {
 }
 

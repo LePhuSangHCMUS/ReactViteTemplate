@@ -3,7 +3,7 @@
 import React from "react";
 import useDarkMode from "use-dark-mode";
 //Styled Component
-import styles from "./ButtonDarkMode.module.scss";
+import styles from "./ButtonDarkMode.module.less";
 //Const
 
 const ButtonDarkMode = (props: any) => {

@@ -4,7 +4,7 @@ import Footer from "@Common/Footer/Footer";
 import Header from "@Common/Header/Header";
 import React from "react";
 //Styled
-import styles from "./UserLayout.module.scss";
+import styles from "./UserLayout.module.less";
 
 
 interface IProps {

@@ -7,7 +7,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Outlet } from "react-router";
 //Styled
-import styles from "./DashboardLayout.module.scss";
+import styles from "./DashboardLayout.module.less";
 
 interface IProps {
 }
