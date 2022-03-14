@@ -8,7 +8,10 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { dependencies } from './package.json';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { inspectorServer } from 'react-dev-inspector/plugins/vite'
-
+import vitePluginImp from 'vite-plugin-imp'
+import path from 'path'
+import fs from 'fs'
+import lessToJS from 'less-vars-to-js'
 const generateScopedName = "[name]__[local]___[hash:base64:5]";
 // console.log(dependencies);
 
@@ -23,6 +26,9 @@ const reactDeps = Object.keys(dependencies).filter(key => key === 'react' || key
 //     return chunks
 //   }, {}),
 // }
+const themeVariables = lessToJS(
+  fs.readFileSync(path.resolve(__dirname, './config/variables.less'), 'utf8')
+)
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode })=>{
@@ -44,12 +50,27 @@ export default defineConfig(({ command, mode })=>{
       },
     }),
     inspectorServer(),
-  
+    vitePluginImp({
+      libList: [
+        {
+          libName: "antd",
+          style: (name) => `antd/lib/${name}/style/index.less`,
+        },
+      ],
+    })
   ],
     css: {
       modules: {
         generateScopedName,
       },
+      preprocessorOptions: {
+        less: {
+          // 支持内联 JavaScript
+          javascriptEnabled: true,
+          modifyVars: themeVariables
+
+        }
+      }
     },
   resolve: {
     alias: [

@@ -9,7 +9,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 //Styles
-import styles from "./Register.module.scss";
+import styles from "./Register.module.less";
 
 const layout = {
   labelCol: { span: 8 },

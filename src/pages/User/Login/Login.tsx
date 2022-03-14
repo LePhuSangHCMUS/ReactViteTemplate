@@ -11,7 +11,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 //Styles
-import styles from "./Login.module.scss";
+import styles from "./Login.module.less";
 
 const layout = {
   labelCol: { span: 8 },
