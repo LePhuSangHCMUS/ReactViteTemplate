@@ -1,8 +1,39 @@
 {
-    "COMMON_NAV_HOME": "Home",
-    "COMMON_NAV_LOGIN": "Login",
-    "HOME_TITLE": "Home",
-    "LOGIN_USERNAME": "Username",
-    "LOGIN_PASSWORD": "Password",
-    "LOGIN_REMEMBER_ME": "Remember me"
+    "COMMON": {
+        "NAV": {
+            "HOME": "Home",
+            "LOGIN": "Login"
+        },
+        "BUTTON": {
+            "SAVE": "save",
+            "DELETE": "delete",
+            "CANCEL": "cancel",
+            "EDIT": "edit"
+        },
+        "LABEL": {
+            "NAME": "name",
+            "AGE": "age"
+        },
+        "TITLE": {},
+        "PLACEHOLDER": {}
+    },
+    "PAGE": {
+        "LOGIN": {
+            "BUTTON": {
+                "SAVE": "save",
+                "DELETE": "delete",
+                "CANCEL": "cancel",
+                "EDIT": "edit"
+            },
+            "LABEL": {
+                "NAME": "name",
+                "AGE": "age"
+            },
+            "TITLE": {},
+            "PLACEHOLDER": {},
+             "FORM":{
+                 
+             }
+        }
+    }
 }

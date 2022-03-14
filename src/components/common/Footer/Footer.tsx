@@ -1,7 +1,7 @@
 //Lib
 import React from 'react';
 //Styled Component
-import styles from "./Footer.module.scss";
+import styles from "./Footer.module.less";
 //Const
 
 const Footer = () => {

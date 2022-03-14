@@ -1,8 +1,39 @@
 {
-    "COMMON_NAV_HOME": "Trang Chủ",
-    "COMMON_NAV_LOGIN": "Đăng Nhập",
-    "HOME_TITLE": "Trang Chủ",
-    "LOGIN_USERNAME": "Tài khoản",
-    "LOGIN_PASSWORD": "Mật khẩu",
-    "LOGIN_REMEMBER_ME": "Nhớ mật khẩu"
+    "COMMON": {
+        "NAV": {
+            "HOME": "Home",
+            "LOGIN": "Login"
+        },
+        "BUTTON": {
+            "SAVE": "save",
+            "DELETE": "delete",
+            "CANCEL": "cancel",
+            "EDIT": "edit"
+        },
+        "LABEL": {
+            "NAME": "name",
+            "AGE": "age"
+        },
+        "TITLE": {},
+        "PLACEHOLDER": {}
+    },
+    "PAGE": {
+        "LOGIN": {
+            "BUTTON": {
+                "SAVE": "save",
+                "DELETE": "delete",
+                "CANCEL": "cancel",
+                "EDIT": "edit"
+            },
+            "LABEL": {
+                "NAME": "name",
+                "AGE": "age"
+            },
+            "TITLE": {},
+            "PLACEHOLDER": {},
+             "FORM":{
+                 
+             }
+        }
+    }
 }

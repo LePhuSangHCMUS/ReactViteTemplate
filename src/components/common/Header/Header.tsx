@@ -9,7 +9,7 @@ import { Link,NavLink } from "react-router-dom";
 //Const
 import { headerData } from "./const";
 //styled
-import styles from "./Header.module.scss";
+import styles from "./Header.module.less";
 const Header = () => {
   const { t, i18n } = useTranslation("common");
 

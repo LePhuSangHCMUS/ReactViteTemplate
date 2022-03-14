@@ -20,7 +20,7 @@ import { PersistGate } from "redux-persist/integration/react";
 //const
 //Styled Component Config
 //style
-import "./app.scss";
+import "./app.less";
 import AppRouter from "./appRoute/AppRoute";
 import storeConfig from "./reduxs/store";
 import { Inspector, InspectParams } from 'react-dev-inspector'
