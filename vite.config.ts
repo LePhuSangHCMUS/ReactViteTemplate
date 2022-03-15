@@ -125,7 +125,7 @@ export default defineConfig(({ command, mode })=>{
 
     },
   },
-  envDir:"./environments",
+   envDir: (mode !== 'production') ? "./environments" : "",
   server: {
     port: 9001,
     hmr:{
