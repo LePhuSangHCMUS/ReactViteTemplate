@@ -27,7 +27,7 @@ const reactDeps = Object.keys(dependencies).filter(key => key === 'react' || key
 //   }, {}),
 // }
 const themeVariables = lessToJS(
-  fs.readFileSync(path.resolve(__dirname, './config/variables.less'), 'utf8')
+  fs.readFileSync(path.resolve(__dirname, './config/override-antd-variables.less'), 'utf8')
 )
 
 // https://vitejs.dev/config/
