@@ -125,6 +125,7 @@ export default defineConfig(({ command, mode })=>{
 
     },
   },
+  envDir:"./environments",
   server: {
     port: 9001,
     hmr:{

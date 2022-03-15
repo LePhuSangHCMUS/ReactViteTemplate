@@ -76,5 +76,5 @@
       ]
   }
   },
-  "include": ["./src"]
+  "include": ["./src", "env"]
 }

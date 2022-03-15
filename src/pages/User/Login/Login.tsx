@@ -26,6 +26,7 @@ const tailLayout = {
 const Demo = () => {
   // const loginData = useRecoilValue(loginAtom);
   // const setUseNameData = useSetRecoilState(withUserName);  
+console.log(import.meta.env.VITE_MEDIA_URL);
 
   //==================  CONST  =============================
   const { t, i18n } = useTranslation("common");
@@ -103,7 +104,7 @@ const Demo = () => {
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-          ccccccccccccccccccccccccc<Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
