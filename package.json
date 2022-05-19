@@ -5,30 +5,27 @@
     "start": "vite --mode development",
     "start:tailwind": " npm run watch:css && vite --mode development",
     "build": "npm run watch:css && vite build && npm run watch:css && vite  --mode production ",
-
     "start:dev": "npm run watch:css && vite --mode development",
     "start:staging": "npm run watch:css && vite --mode staging",
     "start:uat": "npm run watch:css && vite --mode uat",
     "start:prod": "npm run watch:css && vite --mode production",
-    
     "build:dev": "npm run watch:css && vite build --mode development",
     "build:staging": "npm run watch:css && vite build --mode staging",
     "build:uat": "npm run watch:css && vite --mode uat",
     "build:prod": "npm run watch:css && vite build --mode production",
-    
-    
-   
-
     "analyze": "npm run watch:css && vite build --mode analyze",
     "serve": "vite preview",
     "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css",
     "lint": "eslint ./src --ignore-path .gitignore",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@rollup/plugin-alias": "^3.1.8",
     "antd": "^4.16.13",
     "axios": "^0.24.0",
+    "classnames": "^2.3.1",
     "connected-react-router": "^6.9.1",
     "dotenv": "^10.0.0",
     "env-cmd": "^10.1.0",
@@ -63,7 +60,15 @@
     "vite-tsconfig-paths": "^3.3.17"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.12",
     "@originjs/vite-plugin-commonjs": "^1.0.1",
+    "@storybook/addon-actions": "^6.5.0",
+    "@storybook/addon-essentials": "^6.5.0",
+    "@storybook/addon-interactions": "^6.5.0",
+    "@storybook/addon-links": "^6.5.0",
+    "@storybook/builder-vite": "^0.1.34",
+    "@storybook/react": "^6.5.0",
+    "@storybook/testing-library": "^0.0.11",
     "@types/lodash": "^4.14.179",
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.0",
@@ -71,9 +76,11 @@
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-react": "^1.0.0",
+    "babel-loader": "^8.2.5",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-storybook": "^0.5.12",
     "less": "^4.1.2",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
