@@ -28,7 +28,7 @@ import { unfoldSaga } from "../unfoldSaga";
 import ActionType from "./action-type";
 import baseApi from "./api";
 import { ILoginCredentials } from "@Interfaces/credentials";
-import {loginAPI} from "../../mock-api/api"
+import API from "./api"
 interface ITakeAction {
   callbacks?: any;
   payload: ILoginCredentials;
@@ -38,7 +38,7 @@ interface ITakeAction {
 function* takeLogin({ callbacks, payload, type }: ITakeAction) {
   yield unfoldSaga({
     handler: async () => {
-      const response = await loginAPI(payload);
+      const response = await API.loginUser(payload);
       return response; // Or response.json();
     },
     key: type, // Once and for all.

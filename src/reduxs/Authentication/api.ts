@@ -5,8 +5,8 @@ import apiConfig from "@Configs/api/api.config"
 import { Api } from "@Configs/api/api";
 
 //API ENDPOINT
- const API_LOGIN="/identity/auth"
- const API_REGISTER="/api_registany"
+ const API_LOGIN="/auth/login"
+ const API_REGISTER="/auth/register"
 //===============================================
 class BaseApi extends Api {
     public constructor (config: AxiosRequestConfig) {

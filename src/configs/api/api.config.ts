@@ -1,7 +1,9 @@
 import * as qs from "qs";
 import { PathLike } from "fs";
-const REACT_BASE_URL=process.env.REACT_BASE_URL
-const  apiConfig = {
+const REACT_BASE_URL = import.meta.env.VITE_BASE_URL;
+console.log(REACT_BASE_URL);
+
+const  apiConfig :any= {
     returnRejectedPromiseOnError: true,
     withCredentials: true,
     timeout: 30000,
