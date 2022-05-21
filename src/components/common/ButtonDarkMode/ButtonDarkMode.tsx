@@ -9,7 +9,7 @@ import styles from "./ButtonDarkMode.module.less";
 const ButtonDarkMode = (props: any) => {
 const {toggleTheme,theme} =props;
   return (
-    <div className={styles.Component}>
+    <div className={styles.Component}>z
       <input type="checkbox" id="theme-toggle" defaultChecked={theme === 'dark' ? true : false} />
       <label
         htmlFor="theme-toggle"
