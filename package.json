@@ -21,7 +21,7 @@
     "lint:fix": "npm run lint -- --fixs",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "start-mock-server": "nodemon --watch ./mock-server/index.js"
+    "start-mock-server": "node ./mock-server/index.js"
   },
   "dependencies": {
     "@rollup/plugin-alias": "^3.1.8",
