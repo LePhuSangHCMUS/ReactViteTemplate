@@ -1,0 +1,13 @@
+Main branch :  dev ;
+
+Tách nhánh Features tương đường với US : 
+
+Branch Name : US-1234/Develop-Feature-1234
+
+Commit : ":sparkles: US #12345 : Develop Feature 1234  "
+
+
+Fixbug-1234/Fixbug-XYZ-ABC
+Commit : 
+US #1234 :  Dev UI Merchant Portal
+Fixbug #1234 : Fixbug-XYZ-ABC
