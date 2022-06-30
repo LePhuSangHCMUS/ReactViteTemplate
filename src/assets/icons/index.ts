@@ -1,5 +1,4 @@
 import logo from "./logo/logo.png"
-
-export default {
+export const ICONS = {
     logo
 }

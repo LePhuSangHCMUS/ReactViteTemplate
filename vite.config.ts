@@ -89,7 +89,7 @@ export default defineConfig(({ command, mode })=>{
       { find: '@Hooks', replacement: resolve(projectRootDir, 'src/hooks') },
       { find: '@Recoils', replacement: resolve(projectRootDir, 'src/recoils') },
       { find: '@Apis', replacement: resolve(projectRootDir, 'src/apis') },
-      { find: '@Constants', replacement: resolve(projectRootDir, 'src/constants') },
+      { find: '@Consts', replacement: resolve(projectRootDir, 'src/consts') },
       { find: '@Reduxs', replacement: resolve(projectRootDir, 'src/reduxs') },
       { find: '@Common', replacement: resolve(projectRootDir, 'src/components/common') },
       { find: '@Hocs', replacement: resolve(projectRootDir, 'src/hocs') },

@@ -2,6 +2,7 @@ import HelmetTag from "@Common/HelmetTag/HelmetTag";
 import meta from "@Metas/home";
 import React from "react";
 import styles from "./Home.module.less"
+import  { THEMES } from "@Consts"
 const Home = (props: any) => {
   // console.log(( global as any).socket);
   //FUNCTION
