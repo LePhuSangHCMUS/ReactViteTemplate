@@ -6,7 +6,15 @@ import 'antd/dist/antd.css'
 
 //Disable Console.log Production Mode
 if (import.meta.env.MODE === 'production') {
-  console.log = function () {};
+	console.log = () => {};
+	console.time = () => {};
+	console.timeLog = () => {};
+	console.timeEnd = () => {};
+	console.warn = () => {};
+	console.count = () => {};
+	console.countReset = () => {};
+	console.error = () => {};
+  console.info = () => { };
 }
 
 ReactDOM.render(
