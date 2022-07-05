@@ -12,6 +12,8 @@ import vitePluginImp from 'vite-plugin-imp'
 import path from 'path'
 import fs from 'fs'
 import lessToJS from 'less-vars-to-js'
+import eslint from 'vite-plugin-eslint';
+
 const generateScopedName = "[name]__[local]___[hash:base64:5]";
 // console.log(dependencies);
 
@@ -36,7 +38,8 @@ export default defineConfig(({ command, mode })=>{
   console.log(command);
 
  return {
-  plugins: [
+   plugins: [
+    eslint(),
     react(),
     alias(),
     viteCommonjs(),

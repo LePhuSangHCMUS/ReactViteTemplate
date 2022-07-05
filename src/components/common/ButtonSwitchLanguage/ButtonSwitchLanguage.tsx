@@ -10,7 +10,7 @@ import React from 'react';
 import { countryFlags } from "./const";
 
 interface IProps {
-  onChangeLanguage: Function;
+  onChangeLanguage: any;
 }
 const { Option } = Select;
 

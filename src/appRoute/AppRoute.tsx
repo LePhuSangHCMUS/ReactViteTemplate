@@ -1,7 +1,7 @@
 import routes from '@Configs/routes';
 import { useRoutes } from 'react-router-dom';
 import {useSelector} from "react-redux"
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 function AppRoute() {
   const { isLoggedIn } = useSelector((state:any) => {
      return {

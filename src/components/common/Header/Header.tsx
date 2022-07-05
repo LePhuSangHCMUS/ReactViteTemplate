@@ -1,6 +1,6 @@
 //Lib
 //Icon
-import {logo} from "@Assets/icons";
+import {ICONS} from "@Assets/icons";
 import ButtonSwitchLanguage from "@Common/ButtonSwitchLanguage/ButtonSwitchLanguage";
 //Component
 import React from "react";
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className={styles.Component}>
       <Link  to="/">
-        <img src={logo} alt="Icon" />
+        <img src={ICONS.logo} alt="Icon" />
       </Link>
       <div className={styles.Navigator}>
         {headerData.map((item, index) => {

@@ -1635,10 +1635,10 @@
   dependencies:
     "slash" "^3.0.0"
 
-"@rollup/pluginutils@^4.1.1":
-  "integrity" "sha512-clDjivHqWGXi7u+0d2r2sBi4Ie6VLEAzWMIkvJLnDmxoOhBYOTfzGbOQBA32THHm11/LiJbd01tJUpJsbshSWQ=="
-  "resolved" "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-4.1.1.tgz"
-  "version" "4.1.1"
+"@rollup/pluginutils@^4.1.1", "@rollup/pluginutils@^4.2.1":
+  "integrity" "sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ=="
+  "resolved" "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-4.2.1.tgz"
+  "version" "4.2.1"
   dependencies:
     "estree-walker" "^2.0.1"
     "picomatch" "^2.2.2"
@@ -2593,7 +2593,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/estree@^0.0.51":
+"@types/eslint@^8.4.2":
+  "integrity" "sha512-dhsC09y1gpJWnK+Ff4SGvCuSnk9DaU0BJZSzOwa6GVSg65XtTugLBITDAAzRU5duGBoXBHpdR/9jHGxJjNflJQ=="
+  "resolved" "https://registry.npmjs.org/@types/eslint/-/eslint-8.4.5.tgz"
+  "version" "8.4.5"
+  dependencies:
+    "@types/estree" "*"
+    "@types/json-schema" "*"
+
+"@types/estree@*", "@types/estree@^0.0.51":
   "integrity" "sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ=="
   "resolved" "https://registry.npmjs.org/@types/estree/-/estree-0.0.51.tgz"
   "version" "0.0.51"
@@ -2674,7 +2682,7 @@
   "resolved" "https://registry.npmjs.org/@types/json-buffer/-/json-buffer-3.0.0.tgz"
   "version" "3.0.0"
 
-"@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
+"@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   "integrity" "sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ=="
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz"
   "version" "7.0.9"
@@ -5812,7 +5820,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.1.0.tgz"
   "version" "3.1.0"
 
-"eslint@*", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^8.3.0", "eslint@>= 6", "eslint@>=5", "eslint@>=6":
+"eslint@*", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^8.3.0", "eslint@>= 6", "eslint@>=5", "eslint@>=6", "eslint@>=7":
   "integrity" "sha512-aIay56Ph6RxOTC7xyr59Kt3ewX185SaGnAr8eWukoPLeriCrvGjvAubxuvaXOfsxhtwV5g0uBOsyhAom4qJdww=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.3.0.tgz"
   "version" "8.3.0"
@@ -11655,10 +11663,10 @@
     "source-map" "^0.7.3"
     "yargs" "^17.3.1"
 
-"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.57.0":
-  "integrity" "sha512-akwfnpjY0rXEDSn1UTVfKXJhPsEBu+imi1gqBA1ZkHGydUnkV/fWCC90P7rDaLEW8KTwBcS1G3N4893Ndz+jwg=="
-  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.60.1.tgz"
-  "version" "2.60.1"
+"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.57.0", "rollup@^2.70.2":
+  "integrity" "sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ=="
+  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.75.7.tgz"
+  "version" "2.75.7"
   optionalDependencies:
     "fsevents" "~2.3.2"
 
@@ -13297,6 +13305,15 @@
     "unist-util-stringify-position" "^2.0.0"
     "vfile-message" "^2.0.0"
 
+"vite-plugin-eslint@^1.6.1":
+  "integrity" "sha512-wXwGJ222zjlllHmmPXX6oSU8DbmYjnA6HHBYbOLT8WAc73j4/YAtBQHCVSoHOTPiT4TPzsuZSvputWwc86BweQ=="
+  "resolved" "https://registry.npmjs.org/vite-plugin-eslint/-/vite-plugin-eslint-1.6.1.tgz"
+  "version" "1.6.1"
+  dependencies:
+    "@rollup/pluginutils" "^4.2.1"
+    "@types/eslint" "^8.4.2"
+    "rollup" "^2.70.2"
+
 "vite-plugin-imp@^2.1.6":
   "integrity" "sha512-aHBAw3Shs0DhwuRuXr67d2coc5HkN1YWk1eClQDn+T6dxs1fIRfDj0a/lBSd/rOMJ4dXSjUaWZ/ngpp1KjD43A=="
   "resolved" "https://registry.npmjs.org/vite-plugin-imp/-/vite-plugin-imp-2.1.6.tgz"
@@ -13338,7 +13355,7 @@
     "recrawl-sync" "^2.0.3"
     "tsconfig-paths" "^3.9.0"
 
-"vite@*", "vite@^2.3.6", "vite@^2.6.4", "vite@>= 2.0.0-beta.5", "vite@>=2.6.7", "vite@>2.0.0-0":
+"vite@*", "vite@^2.0.0", "vite@^2.3.6", "vite@^2.6.4", "vite@>= 2.0.0-beta.5", "vite@>=2.6.7", "vite@>2.0.0-0":
   "integrity" "sha512-2HA9xGyi+EhY2MXo0+A2dRsqsAG3eFNEVIo12olkWhOmc8LfiM+eMdrXf+Ruje9gdXgvSqjLI9freec1RUM5EA=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-2.6.14.tgz"
   "version" "2.6.14"
