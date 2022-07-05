@@ -22,7 +22,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "start-mock-server": "node ./mock-server/index.js",
-    "start:dev-with-docker": "docker ./Dockerfile.dev"
+    "start:dev-with-docker": "docker ./Dockerfile.dev",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@rollup/plugin-alias": "^3.1.8",
@@ -96,6 +97,7 @@
     "sass": "^1.43.4",
     "typescript": "^4.3.2",
     "vite": "^2.6.4",
-    "vite-plugin-imp": "^2.1.6"
+    "vite-plugin-imp": "^2.1.6",
+    "husky": "^8.0.0"
   }
 }
