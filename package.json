@@ -18,11 +18,12 @@
     "serve": "vite preview",
     "watch:css": "postcss ./tailwind.css -o src/tailwind/styles.css",
     "lint": "eslint ./src --ignore-path .gitignore",
+    "lint:production": "cross-env NODE_ENV=production eslint ./src --ignore-path .gitignore",
+    "lint:precommit": " cross-env NODE_ENV=production eslint ./src --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fixs",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "start-mock-server": "node ./mock-server/index.js",
-    "start:dev-with-docker": "docker ./Dockerfile.dev",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "body-parser": "^1.20.0",
     "classnames": "^2.3.1",
     "connected-react-router": "^6.9.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "env-cmd": "^10.1.0",
     "enzyme": "^3.11.0",
@@ -89,6 +91,7 @@
     "eslint": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-storybook": "^0.5.12",
+    "husky": "^8.0.0",
     "less": "^4.1.2",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
@@ -97,7 +100,6 @@
     "sass": "^1.43.4",
     "typescript": "^4.3.2",
     "vite": "^2.6.4",
-    "vite-plugin-imp": "^2.1.6",
-    "husky": "^8.0.0"
+    "vite-plugin-imp": "^2.1.6"
   }
 }

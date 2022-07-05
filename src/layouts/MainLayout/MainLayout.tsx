@@ -8,7 +8,6 @@ import styles from "./MainLayout.module.less";
 import {Outlet} from "react-router"
 
 interface IProps {
-  something?:string
 }
 
 const MainLayout = (props: IProps) => {
