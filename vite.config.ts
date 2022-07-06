@@ -39,7 +39,7 @@ export default defineConfig(({ command, mode })=>{
 
  return {
    plugins: [
-    eslint(),
+    // eslint(), //Turnoff Eslint
     react(),
     alias(),
     viteCommonjs(),

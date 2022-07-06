@@ -76,7 +76,7 @@ console.log(import.meta.env.VITE_MEDIA_URL);
     <div className={styles.Page}>
 
       <HelmetTag meta={meta} />
-      <Form
+      {/* <Form
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
@@ -108,7 +108,7 @@ console.log(import.meta.env.VITE_MEDIA_URL);
             Submit
           </Button>
         </Form.Item>
-      </Form>
+      </Form> */}
     </div>
     // <button
     // onClick={()=>{

@@ -58,20 +58,18 @@ export default function App() {
     <div className={`app ${theme === "light" ? "light" : "dark"}`}>
       <I18nextProvider i18n={i18next}>
         <BrowserRouter>
-          {/* <InspectorWrapper
-            // props docs see:
-            // https://github.com/zthxxx/react-dev-inspector#inspector-component-props
-            keys={['control', 'shift', 'command', 'c']}
-            disableLaunchEditor={false}
-            onHoverElement={(params: InspectParams) => {
-              
-             }}
-            onClickElement={(params: InspectParams) => {
-
-              console.log(params);
-
-             }}
-          > */}
+          <InspectorWrapper
+           // props see docs:
+          // https://github.com/zthxxx/react-dev-inspector#inspector-component-props
+          keys={['control', 'shift', 'c']}
+          disableLaunchEditor={true}
+          onClickElement={({ codeInfo }: InspectParams) => {
+            if (!codeInfo?.absolutePath) return
+            const { absolutePath, lineNumber, columnNumber } = codeInfo
+            // you can change the url protocol if you are using in Web IDE
+            window.open(`vscode://file/${absolutePath}:${lineNumber}:${columnNumber}`)
+          }}
+          >
             <React.Suspense fallback={<div className="fallback" />}>
               <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
@@ -82,7 +80,7 @@ export default function App() {
                 </PersistGate>
               </Provider>
             </React.Suspense>
-          {/* </InspectorWrapper> */}
+          </InspectorWrapper>
 
         </BrowserRouter>
       </I18nextProvider>
