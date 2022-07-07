@@ -61,7 +61,7 @@ export default function App() {
           <InspectorWrapper
            // props see docs:
           // https://github.com/zthxxx/react-dev-inspector#inspector-component-props
-          keys={['control', 'shift', 'c']}
+          keys={['s', 'a']}
           disableLaunchEditor={true}
           onClickElement={({ codeInfo }: InspectParams) => {
             if (!codeInfo?.absolutePath) return
